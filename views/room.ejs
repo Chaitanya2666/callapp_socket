@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaitanya</title>
+</head>
+<body>
+    <header>
+        <h1>Live Call Room</h1>
+    </header>
+    <main>
+        <div id="welcome">
+            <form>
+                <input placeholder="room name" required type="text">
+                <button>Enter room</button>
+            </form>
+        </div>
+        
+        <div id="call" hidden>
+            <div id="myStream">
+                <video id="myFace" autoplay playsinline width="400" height="400"></video>
+                <button id="mute">Mute</button>
+                <button id="camera">Turn Camera Off</button>
+                
+            </div>
+        </div>
+        <div id="roomName"></div> <!-- Add this element to display the room name -->
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/script.js"></script>
+</body>
+</html>
